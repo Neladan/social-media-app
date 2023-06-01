@@ -1,7 +1,7 @@
 import { BrowserRouter, Navigate, Routes, Route } from 'react-router-dom';
-import HomePage from 'scenes/homePage';
-import LoginPage from 'scenes/loginPage';
-import ProfilePage from 'scenes/profilePage';
+import HomePage from 'components/HomePage';
+import LoginPage from 'components/LoginPage';
+import ProfilePage from 'components/ProfilePage';
 import { useMemo } from 'react';
 import { useSelector } from 'react-redux';
 import { CssBaseline, ThemeProvider } from '@mui/material';
@@ -14,7 +14,7 @@ function App() {
   const theme = useMemo(() => createTheme(themeSettings(mode)), [mode]);
  
   return (
-    <div className='app'>
+    <div className="app">
       <BrowserRouter>
         <ThemeProvider theme={theme}>
           <CssBaseline />
